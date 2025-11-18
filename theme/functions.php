@@ -13,7 +13,27 @@ if ( ! function_exists( 'kora_setup' ) ) :
 endif;
 add_action( 'after_setup_theme', 'kora_setup' );
 
+// Load includes
+$inc_files = array(
+    '/inc/cpt.php',
+    '/inc/api-clients.php',
+    '/inc/admin.php',
+    '/inc/player.php',
+    '/inc/predictions.php',
+    '/inc/scorecalc.php',
+    '/inc/cron.php',
+    '/inc/ads.php',
+);
+foreach ( $inc_files as $f ) {
+    $path = get_template_directory() . $f;
+    if ( file_exists( $path ) ) {
+        require_once $path;
+    }
+}
+
 function kora_scripts() {
     wp_enqueue_style( 'kora-style', get_stylesheet_uri(), array(), '0.1.0' );
 }
 add_action( 'wp_enqueue_scripts', 'kora_scripts' );
+
+?>
