@@ -1,0 +1,12 @@
+/*
+Theme Name: Kora Theme
+Theme URI: https://github.com/Mady4host/mady4host_kora
+Author: Mady4host
+Author URI: https://github.com/Mady4host
+Description: Custom WordPress theme for Kora site (initial scaffold)
+Version: 0.1.0
+License: GNU General Public License v2 or later
+Text Domain: kora-theme
+*/
+
+body { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; }
